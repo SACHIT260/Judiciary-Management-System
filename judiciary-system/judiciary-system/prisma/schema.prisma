@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  JUDGE
+  LAWYER
+  COURT_INTERPRETOR
+  ACCUSER
+  ACCUSED
+  ADMINISTRATOR
+}
+
+model User {
+  id                Int                 @id @default(autoincrement())
+  name              String
+  password          String?
+  mobile            String?
+  email             String              @unique
+  caseDetails       caseDetails[]
+  role              Role
+  JudgeAvailability JudgeAvailability[]
+}
+
+model caseDetails {
+  id            Int      @id @default(autoincrement())
+  case          User     @relation(fields: [userID], references: [id])
+  userID        Int
+  caseTitle     String?
+  assignedJudge Int?
+  documentId    String?  @default(uuid())
+  assignedDate  String?
+  assignedRoom  Int?
+  caseResult    Boolean?
+}
+
+model JudgeAvailability {
+  id               Int    @id @default(autoincrement())
+  DayName          String
+  SlotTime         String
+  WeeklyEngagement Json
+  dayno            Int
+  judge            User   @relation(fields: [judgeID], references: [id])
+  judgeID          Int
+}

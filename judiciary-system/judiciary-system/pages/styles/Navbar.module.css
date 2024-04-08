@@ -1,0 +1,26 @@
+.ul {
+    display: flex;
+    gap: 3.2rem;
+    justify-content: flex-end;
+    align-content: flex-end;
+    margin-left: auto;
+
+}
+
+.li {
+    color: #0abde3;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.container {
+    position: fixed;
+    text-decoration: none;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    background-color: #f0f0f0;
+    margin-right: 5rem;
+    padding: 20px;
+}

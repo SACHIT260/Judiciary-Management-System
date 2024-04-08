@@ -1,0 +1,46 @@
+/* Style for header */
+.head {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.head h1 {
+    font-size: 2.5rem;
+}
+
+/* Style for paragraphs */
+.pa {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pa p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Style for key features box */
+.box {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+.box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.box ul {
+    padding-left: 20px;
+}
+
+.box li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.ul, .ol {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
